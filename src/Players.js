@@ -2,13 +2,25 @@ import React, {Component} from 'react'
 
 class Players extends Component {
   render() {
+    const playerStyle = {
+      display: 'flex',
+      padding: 10
+    }
+
+    const playerNameStyle = {
+      flex: '1'
+    }
+
+    const playerScoreStyle = {
+      width: 200
+    }
     return (
       <div className="players">
-        <div className="player">
-          <div className="player-name">
+        <div className="player" style={playerStyle}>
+          <div className="player-name" style={playerNameStyle}>
             Jose Valim
           </div>
-          <div className="player-score">
+          <div className="player-score" style={playerScoreStyle}>
             <div className="counter">
               <button className="counter-action decrement">-</button>
               <span className="counter-score">319</span>
