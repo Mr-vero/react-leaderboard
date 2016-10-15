@@ -1,9 +1,16 @@
 import React from 'react'
 
+import Header from './Header.js'
+import Players from './Players.js'
+
 class Leaderboard extends React.Component {
   render () {
+
     return (
-      <h1>Hello, Bandung!</h1>
+      <div className="application">
+        <Header />
+        <Players />
+      </div>
     )
   }
 }
