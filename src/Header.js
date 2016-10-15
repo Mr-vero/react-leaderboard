@@ -2,8 +2,13 @@ import React, {Component} from 'react'
 
 class Header extends Component {
   render() {
+
+    const styles = {
+      display: 'flex'
+    }
+
     return (
-      <div>
+      <div style={styles}>
         <Total />
         <Title />
       </div>
@@ -13,9 +18,18 @@ class Header extends Component {
 
 class Title extends Component {
   render() {
+    const h1Style = {
+      margin: 0
+    }
+
+    const headerStyle = {
+      marginBottom: 22,
+      width: 220
+    }
+
     return (
-      <div className="header">
-        <h1>Leaderboard</h1>
+      <div className="header" style={headerStyle}>
+        <h1 style={h1Style}>Leaderboard</h1>
       </div>
     )
 
@@ -24,8 +38,11 @@ class Title extends Component {
 
 class Total extends Component {
   render() {
+    const styles = {
+      flex: '1'
+    }
     return (
-      <div>
+      <div style={styles}>
         <div className="total-player">
           Players: 3
         </div>

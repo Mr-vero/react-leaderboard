@@ -21,6 +21,7 @@ class Players extends Component {
       textAlign: 'center'
     }
 
+
     return (
       <div className="players">
         <div className="player" style={playerStyle}>
