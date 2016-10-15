@@ -14,6 +14,13 @@ class Players extends Component {
     const playerScoreStyle = {
       width: 200
     }
+
+    const counterScoreStyle = {
+      display: 'inline-block',
+      width: 46,
+      textAlign: 'center'
+    }
+
     return (
       <div className="players">
         <div className="player" style={playerStyle}>
@@ -23,33 +30,33 @@ class Players extends Component {
           <div className="player-score" style={playerScoreStyle}>
             <div className="counter">
               <button className="counter-action decrement">-</button>
-              <span className="counter-score">319</span>
+              <span className="counter-score" style={counterScoreStyle}>319</span>
               <button className="counter-action increment">+</button>
             </div>
           </div>
         </div>
 
-        <div className="player">
-          <div className="player-name">
+        <div className="player" style={playerStyle}>
+          <div className="player-name" style={playerNameStyle}>
             Zed Shaw
           </div>
-          <div className="player-score">
+          <div className="player-score" style={playerScoreStyle}>
             <div className="counter">
               <button className="counter-action decrement">-</button>
-              <span className="counter-score">76</span>
+              <span className="counter-score" style={counterScoreStyle}>76</span>
               <button className="counter-action increment">+</button>
             </div>
           </div>
         </div>
 
-        <div className="player">
-          <div className="player-name">
+        <div className="player" style={playerStyle}>
+          <div className="player-name" style={playerNameStyle}>
             Guido
           </div>
-          <div className="player-score">
+          <div className="player-score" style={playerScoreStyle}>
             <div className="counter">
               <button className="counter-action decrement">-</button>
-              <span className="counter-score">276</span>
+              <span className="counter-score" style={counterScoreStyle}>276</span>
               <button className="counter-action increment">+</button>
             </div>
           </div>
