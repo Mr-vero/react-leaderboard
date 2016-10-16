@@ -12,7 +12,7 @@ class Leaderboard extends React.Component {
     return (
       <div className="application" style={leaderboardStyle}>
         <Header title="Top Score"/>
-        <Players />
+        <Players players={this.props.players}/>
       </div>
     )
   }
