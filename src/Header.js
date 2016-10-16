@@ -9,7 +9,7 @@ class Header extends Component {
 
     return (
       <div style={styles}>
-        <Total />
+        <Total total={this.props.total} />
         <Title title={this.props.title}/>
       </div>
     )
@@ -44,7 +44,7 @@ class Total extends Component {
     return (
       <div style={styles}>
         <div className="total-player">
-          Players: 3
+          Players: {this.props.total}
         </div>
         <div className="total-point">
           Total Point: 100
