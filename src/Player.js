@@ -12,6 +12,11 @@ class Player extends Component {
       score: (this.state.score + 10)
     })
   }
+  decrementScore(e) {
+    this.setState({
+      score: (this.state.score - 10)
+    })
+  }
   render() {
     const playerStyle = {
       display: 'flex',
@@ -39,7 +44,7 @@ class Player extends Component {
         </div>
         <div className="player-score" style={playerScoreStyle}>
           <div className="counter">
-            <button className="counter-action decrement">-</button>
+            <button className="counter-action decrement" onClick={this.decrementScore.bind(this)}>-</button>
             <span className="counter-score" style={counterScoreStyle}>{this.state.score}</span>
             <button className="counter-action increment" onClick={this.incrementScore.bind(this)}>+</button>
           </div>
