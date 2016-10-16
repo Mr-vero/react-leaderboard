@@ -10,7 +10,7 @@ class Header extends Component {
     return (
       <div style={styles}>
         <Total />
-        <Title />
+        <Title title={this.props.title}/>
       </div>
     )
   }
@@ -29,7 +29,7 @@ class Title extends Component {
 
     return (
       <div className="header" style={headerStyle}>
-        <h1 style={h1Style}>Leaderboard</h1>
+        <h1 style={h1Style}>{this.props.title}</h1>
       </div>
     )
 
