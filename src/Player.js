@@ -24,12 +24,12 @@ class Player extends Component {
     return (
       <div className="player" style={playerStyle}>
         <div className="player-name" style={playerNameStyle}>
-          Jose Valim
+          {this.props.name}
         </div>
         <div className="player-score" style={playerScoreStyle}>
           <div className="counter">
             <button className="counter-action decrement">-</button>
-            <span className="counter-score" style={counterScoreStyle}>319</span>
+            <span className="counter-score" style={counterScoreStyle}>{this.props.score}</span>
             <button className="counter-action increment">+</button>
           </div>
         </div>

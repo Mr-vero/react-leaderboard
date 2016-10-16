@@ -8,9 +8,9 @@ class Players extends Component {
 
     return (
       <div className="players">
-        <Player />
-        <Player />
-        <Player />
+        <Player name="Jose Valim" score={319} />
+        <Player name="Zed Shaw" score={110} />
+        <Player name="Guido van Rossum" score={410} />
       </div>
     )
   }
