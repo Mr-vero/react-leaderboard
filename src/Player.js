@@ -1,6 +1,17 @@
 import React, { Component } from 'react'
 
 class Player extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      score: 0
+    }
+  }
+  incrementScore(e) {
+    this.setState({
+      score: (this.state.score + 10)
+    })
+  }
   render() {
     const playerStyle = {
       display: 'flex',
@@ -29,8 +40,8 @@ class Player extends Component {
         <div className="player-score" style={playerScoreStyle}>
           <div className="counter">
             <button className="counter-action decrement">-</button>
-            <span className="counter-score" style={counterScoreStyle}>{this.props.score}</span>
-            <button className="counter-action increment">+</button>
+            <span className="counter-score" style={counterScoreStyle}>{this.state.score}</span>
+            <button className="counter-action increment" onClick={this.incrementScore.bind(this)}>+</button>
           </div>
         </div>
       </div>
