@@ -44,9 +44,9 @@ class Player extends Component {
         </div>
         <div className="player-score" style={playerScoreStyle}>
           <div className="counter">
-            <button className="counter-action decrement" onClick={this.decrementScore.bind(this)}>-</button>
+            <button className="counter-action decrement" onClick={function () {this.props.onScoreChange(-10)}.bind(this)}>-</button>
             <span className="counter-score" style={counterScoreStyle}>{this.state.score}</span>
-            <button className="counter-action increment" onClick={this.incrementScore.bind(this)}>+</button>
+            <button className="counter-action increment" onClick={function () {this.props.onScoreChange(10)}.bind(this)}>+</button>
           </div>
         </div>
       </div>
