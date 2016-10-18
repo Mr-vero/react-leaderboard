@@ -2,7 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 let Leaderboard = React.createClass({
-
   render: () => {
 
     const leaderboardStyle = {
