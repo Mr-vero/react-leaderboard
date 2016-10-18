@@ -1,21 +1,18 @@
 import React from 'react'
 
-import Header from './Header.js'
-import Players from './Players.js'
+let Leaderboard = React.createClass({
 
-class Leaderboard extends React.Component {
-  render () {
+  render: () => {
     const leaderboardStyle = {
       padding: 60
     }
 
     return (
-      <div className="application" style={leaderboardStyle}>
-        <Header title="Top Score" total={this.props.players.length}/>
-        <Players players={this.props.players}/>
+      <div style={leaderboardStyle}>
+        <h1>Leaderboard</h1>
       </div>
     )
   }
-}
+})
 
 export default Leaderboard

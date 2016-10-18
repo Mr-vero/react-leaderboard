@@ -1,28 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Leaderboard from './Leaderboard';
-import './index.css';
 
-const PLAYERS = [
-  {
-    name: "Jose Valim",
-    score: 312
-  },
-  {
-    name: "Guido van Rossum",
-    score: 111
-  },
-  {
-    name: "Zed Shaw",
-    score: 222
-  },
-  {
-    name: "Matz",
-    score: 70
+let Leaderboard = React.createClass({
+
+  render: () => {
+
+    const leaderboardStyle = {
+      padding: 60
+    }
+
+    return (
+      <div style={leaderboardStyle}>
+        <h1>Leaderboard</h1>
+      </div>
+    )
   }
-]
+})
 
-ReactDOM.render(
-  <Leaderboard players={PLAYERS} />,
-  document.getElementById('root')
-);
+ReactDOM.render( <Leaderboard />, document.getElementById('root'));
