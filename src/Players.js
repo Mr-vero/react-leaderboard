@@ -1,21 +1,14 @@
-import React, {Component} from 'react'
+import React from 'react'
 
 import Player from './Player.js'
 
-class Players extends Component {
-  onScoreChange(index, number) {
-    
-  console.log("onScoreChange", index, number)
-  }
+class Players extends React.Component {
   render() {
-
     return (
-      <div className="players">
-      {
-        this.props.players.map( (player, index) => {
-          return <Player name={player.name} score={player.score} key={index} onScoreChange={function (number) {this.onScoreChange(index, number)}.bind(this)} />
-        } )
-      }
+      <div>
+      {this.props.members.map( (player, index) => {
+        return <Player name={player.name} score={player.score} />
+      } )}
       </div>
     )
   }

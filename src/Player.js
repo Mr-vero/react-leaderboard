@@ -1,55 +1,21 @@
-import React, { Component } from 'react'
+import React from 'react'
 
-class Player extends Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      score: 0
-    }
-  }
-  incrementScore(e) {
-    this.setState({
-      score: (this.state.score + 10)
-    })
-  }
-  decrementScore(e) {
-    this.setState({
-      score: (this.state.score - 10)
-    })
-  }
+class Player extends React.Component {
   render() {
-    const playerStyle = {
-      display: 'flex',
-      padding: 10
-    }
-
-    const playerNameStyle = {
-      flex: '1'
-    }
-
-    const playerScoreStyle = {
-      width: 200
-    }
-
-    const counterScoreStyle = {
-      display: 'inline-block',
-      width: 46,
-      textAlign: 'center'
-    }
-
     return (
-      <div className="player" style={playerStyle}>
-        <div className="player-name" style={playerNameStyle}>
-          {this.props.name}
+      <div className="player">
+        <div className="player-name">
+          Jose Valim
         </div>
-        <div className="player-score" style={playerScoreStyle}>
+        <div className="player-score">
           <div className="counter">
-            <button className="counter-action decrement" onClick={function () {this.props.onScoreChange(-10)}.bind(this)}>-</button>
-            <span className="counter-score" style={counterScoreStyle}>{this.state.score}</span>
-            <button className="counter-action increment" onClick={function () {this.props.onScoreChange(10)}.bind(this)}>+</button>
+            <button className="counter-action decrement">-</button>
+            <span className="counter-score">30</span>
+            <button className="counter-action increment">+</button>
           </div>
         </div>
       </div>
+
     )
 
   }

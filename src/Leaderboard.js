@@ -1,18 +1,23 @@
 import React from 'react'
 
-let Leaderboard = React.createClass({
+import Players from './Players.js'
 
-  render: () => {
-    const leaderboardStyle = {
-      padding: 60
-    }
+const PLAYERS = [
+  {id: 1, name: "Jose Valim", score: 30},
+  {id: 2, name: "Guido van Rossum", score: 35},
+  {id: 3, name: "Grace Hopper", score: 44}
+]
+
+class Leaderboard extends React.Component {
+  render() {
 
     return (
-      <div style={leaderboardStyle}>
+      <div>
         <h1>Leaderboard</h1>
+        <Players members={PLAYERS}/>
       </div>
     )
   }
-})
+}
 
 export default Leaderboard
