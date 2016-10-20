@@ -15,6 +15,16 @@ class Leaderboard extends React.Component {
     this.state = {
       members: PLAYERS
     }
+
+    this.onPlayerAdd = this.onPlayerAdd.bind(this)
+  }
+
+  onPlayerAdd(name) {
+    let members = this.state.members
+    members.push({id: members.length + 1, name: name, score: 10})
+    this.setState({
+      members: members
+    })
   }
 
   render() {
@@ -27,7 +37,7 @@ class Leaderboard extends React.Component {
       <div style={styling}>
         <h1>Leaderboard</h1>
         <Players members={this.state.members}/>
-        <AddPlayer />
+        <AddPlayer onAdd={this.onPlayerAdd}/>
       </div>
     )
   }
