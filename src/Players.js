@@ -7,7 +7,7 @@ class Players extends React.Component {
     return (
       <div>
       {this.props.members.map( (player, index) => {
-        return <Player name={player.name} score={player.score} />
+        return <Player name={player.name} score={player.score} key={player.id} />
       } )}
       </div>
     )
